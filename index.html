@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+	
+<body>
+	<acticle>
+			
+			<header class="banner"  >
+				<h1 align='center'> IN & AROUND</h1>
+				<h4 style="padding-left:900px">Dont Get Lost!!!</h4>	
+
+			</header>	
+
+			<nav class="my_nav" style="display:none;width:100%;height:50px">
+				<a class="nav_attractions" >Attractions</a>
+				<a class="nav_restaurants_and_cafe" > Restaurants and cafe</a>
+				<a class="nav_emergency">Emergency</a>
+				<a class="nav_it">IT Industries</a>
+				<a class="nav_malls_and_supermarkets">Malls and supermarkets</a>
+				<a class="nav_theaters">Theaters</a>
+				<a class="nav_fitness">Fitness</a>
+				<a class="nav_banks_and_atm">Banks and ATM</a>
+				<a class="nav_petrol_bunks_and_mechanics">Petrol Bunks and  Mechanics</a>
+				
+			</nav>
+			<div class="tile" id="attractions" style="background-color:rgb(245, 73, 9);">
+					<h3 align="center">Attraction</h3>
+					<div class="attractions desc" style="display:none"> 
+					</div>
+			</div>
+			
+			<div class="tile" id="restaurants_and_cafe"style="background-color:rgb(47, 41, 75)">
+					<h3 align="center">Restaurants and cafe</h3>
+					<div class="restaurants_and_cafe desc" style="display:none">22222</div> 
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile"id="emergency" style="background-color: rgb(81, 131, 6)">
+					<h3 align="center">Emergency</h3>
+					<div class="emergency desc" style="display:none"> hello</div>
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile" id="it"style="background-color:rgb(85, 34, 100);">
+					<h3 align="center">IT Industries</h3>
+					<div class="it desc" style="display:none"> how ar eu</div>
+
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile" id="malls_and_supermarkets" style="background-color:rgb(218, 22, 6)">
+
+					<h3 align="center">Malls and supermarkets</h3>
+					<div class="malls_and_supermarkets desc" style="display:none"> affafas</div>
+
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile" id="theaters" style="background-color:rgb(55, 18, 12)">
+					<h3 align="center">Theaters</h3>
+					<div class="theaters desc" style="display:none"> Theaters</div>
+
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile"  id="fitness" style="background-color:rgb(34, 74, 12)">
+					<h3 align="center">Fitness</h3>
+					<div class="fitness desc" style="display:none">Fitness</div>
+
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile"  id="banks_and_atm"style="background-color:indigo">
+					<h3 align="center">Banks and ATM</h3>
+					<div class="banks_and_atm desc"  style="display:none"> Banks and ATM</div>
+
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<div class="tile" id="petrol_bunks_and_mechanics"style="background-color:rgb(255, 158, 8)">
+					<h3 align="center">Petrol Bunks and  Mechanics</h3>
+					<div class="petrol_bunks_and_mechanics desc" style="display:none">Petrol Bunks and  Mechanics</div>
+
+			</div>
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			 <footer><div  align="center"style="width:100%;height:150px;background-color:"><p> &copy ALL RIGHTS RESERVED</p>
+					<address >#173,7th cross<br>ABC layout,Mysuru</address>
+				</div>
+			</footer>
+		  
+	</article>
+	<script type="text/javascript">
+		 var w = window.innerWidth;
+		 var h = window.innerHeight;
+	
+		 $('.tile').click(function(){
+
+		 	var obj=$(this)
+		 	var property=$(obj).attr('class')
+		 	var id=$(obj).attr('id')
+			
+		 	$(".tile").hide()
+		 	$("#"+id).show()
+		 	$("#"+id).width('1315px')
+		 	$("#"+id).height(h)
+		 	$('.'+id).css('display','block')
+		 	$('.my_nav').css('display','block')
+
+		 })	
+	
+	</script>
+	<script type="text/javascript">
+	 	$(".my_nav a").click(function(){
+
+	 	var obj1=$(this)
+	 	var property1=$(obj1).attr('class')
+	 	//alert(property1)
+	 	if( property1=='nav_attractions')
+	 	{
+	 		$(".tile").hide()
+			
+	 		$('.desc').show()
+	 		$('#attractions').show().width('1315px').height(h)
+			
+			
+	 	}
+	 	else if( property1=='nav_restaurants_and_cafe')
+	 	{
+	 		$(".tile").hide()
+
+	 		$('.desc').show()
+	 		$('#restaurants_and_cafe').show().width('1315px').height(h)
+			
+			
+	 	}
+	 	else if( property1=='nav_emergency')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#emergency').show().width('1315px').height(h)
+	 	}
+	 	else if( property1=='nav_it')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#it').show().width('1315px').height(h)
+	 	}
+	 	else if( property1=='nav_malls_and_supermarkets')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#malls_and_supermarkets').show().width('1315px').height(h)
+	 	}
+	 	else if( property1=='nav_theaters')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#theaters').show().width('1315px').height(h)
+	 	}
+	 	else if( property1=='nav_fitness')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#fitness').show().width('1315px').height(h)
+	 	}
+	 	else if( property1=='nav_banks_and_atm')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#banks_and_atm').show().width('1315px').height(h)
+	 	}
+	 	else if( property1=='nav_petrol_bunks_and_mechanics')
+	 	{
+	 		$(".tile").hide()
+	 		$('.desc').show()
+	 		$('#petrol_bunks_and_mechanics').show().width('1315px').height(h)
+	 	}
+	 })
+
+	</script>
+</body>
+</html>

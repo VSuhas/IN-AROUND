@@ -1,0 +1,14 @@
+.banner{
+	width: 100%;
+	height: auto;
+}
+.tile{
+	width: 33%;
+	height: 150px;	
+	float: left;
+	border:1px solid white;
+	border-radius: 10px;
+	color: white;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
