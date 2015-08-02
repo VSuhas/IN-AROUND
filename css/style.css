@@ -1,14 +1,79 @@
+@font-face {
+	font-family: head;
+	src: url(fonts/head.otf);
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	background-image: url("images/two.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 .banner{
-	width: 100%;
-	height: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+.banner h1 {
+	text-align: center;
+	font-family: head;
+	font-size: 60px;
+	font-weight: lighter;
+}
+.banner h4 {
+	padding-left: 900px;
+}
+article {
+	padding-left : 50px;
+	padding-right: 50px; 
 }
 .tile{
-	width: 33%;
-	height: 150px;	
+	width: 33%;	
 	float: left;
-	border:1px solid white;
-	border-radius: 10px;
-	color: white;
-	letter-spacing: 2px;
-	font-weight: bold;
+	font-family: head;
+	font-size: 20px;
+	text-align: center;
+}
+.my_nav {
+	display:none;
+	width:100%;
+	height:50px;
+}
+.desc {
+	display: none;
+}
+#attractions {
+	background-color:rgba(224, 178, 255, 0.4);
+	border-top-left-radius: 20px;
+}
+#restaurants_and_cafe {
+	background-color:rgba(253, 182, 191, 0.4);
+}
+#emergency {
+	background-color: rgba(181, 207, 251, 0.4);
+	border-top-right-radius: 20px;
+}
+#it {
+	background-color:rgba(177, 254, 186, 0.4);
+}
+#malls_and_supermarkets {
+	background-color:rgba(253, 255, 161, 0.4);
+}
+#theaters {
+	background-color:rgba(224, 178, 255, 0.4);
+}
+#fitness {
+	background-color:rgba(253, 182, 191, 0.4);
+	border-bottom-left-radius: 20px;
+}
+#banks_and_atm {
+	background-color:rgba(181, 207, 251, 0.4);
+}
+#petrol_bunks_and_mechanics {
+	background-color:rgba(177, 254, 186, 0.4);
+	border-bottom-right-radius: 20px;
+}
+footer {
+	text-align: center;
+	clear: both;
 }
