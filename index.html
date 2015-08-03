@@ -7,10 +7,9 @@
 </head>
 	
 <body>
-	<acticle>
 			
 			<header class="banner"  >
-				<a href="#"><img src="css/images/banner.png"></a>
+				<a href="index.html"><img src="css/images/banner.png"></a>
 			</header>	
 
 			<nav class="my_nav">
@@ -26,65 +25,74 @@
 			</nav>
 
 			<article>
-			<div class="tile" id="attractions">
+			<a href = "#" class="tile" data-target = "attractions" id = "tile1">
 					<h3 align="center">Attractions</h3>
 					<img src="css/images/amusement.png">
-					<div class="desc"> 
-					</div>
+			</a>
+			<div id = "attractions" class="desc">
+			Attraction		
 			</div>
-			
-			<div class="tile" id="restaurants_and_cafe">
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<a  href = "#" class="tile" data-target ="restaurants_and_cafe" id="tile2">
 					<h3>Restaurants and cafe</h3>
 					<img src="css/images/cafe.png">
-					<div class="desc">22222</div> 
-			</div>
+			</a>
+			<div class="desc" id="restaurants_and_cafe">22222
+			</div> 
+
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile"id="emergency">
+			<a href="#" class="tile" data-target ="emergency" id = "tile3">
 					<h3>Emergency</h3>
 					<img src="css/images/phone.png">
-					<div class="desc"> hello</div>
+			</a>
+			<div class="desc" id="emergency"> hello
 			</div>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile" id="it">
+			<a href="#" class="tile" data-target="it" id="tile4">
 					<h3>IT Industries</h3>
 					<img src="css/images/it.png">
-					<div class="desc"> how ar eu</div>
+			</a>
+			<div class="desc"  id="it"> how ar eu
 
 			</div>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile" id="malls_and_supermarkets">
-
+			<a href="#" class="tile" data-target="malls_and_supermarkets" id="tile5">
 					<h3>Malls and supermarkets</h3>
 					<img src="css/images/mall.png">
-					<div class="desc"> affafas</div>
+			</a>
+			<div class="desc" id="malls_and_supermarkets"> affafas
 
 			</div>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile" id="theaters">
+			<a href="#" class="tile" data-target="theaters" id="tile6">
 					<h3>Theaters</h3>
 					<img src="css/images/theatre.png">
-					<div class="desc"> Theaters</div>
+			</a>
+			<div class="desc" id="theaters"> Theaters
 
 			</div>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile"  id="fitness">
+			<a href="#" class="tile"  data-target="fitness" id="tile7">
 					<h3>Fitness</h3>
 					<img src="css/images/fit.png">
-					<div class="desc">Fitness</div>
+			</a>
+			<div class="desc" id="fitness">Fitness
 
 			</div>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile"  id="banks_and_atm">
+			<a href="#" class="tile"  data-target="banks_and_atm" id="tile8">
 					<h3>Banks and ATM</h3>
 					<img src="css/images/atm.png">
-					<div class="desc"> Banks and ATM</div>
+			</a>
+			<div class="desc" id="banks_and_atm"> Banks and ATM
 
 			</div>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div class="tile" id="petrol_bunks_and_mechanics">
+			<a href="#" class="tile" data-target="petrol_bunks_and_mechanics" id="tile9">
 					<h3>Petrol Bunks and  Mechanics</h3>
 					<img src="css/images/petrol.png">
-					<div class="desc">Petrol Bunks and  Mechanics</div>
+			</a>
+			<div class="desc" id="petrol_bunks_and_mechanics">Petrol Bunks and  Mechanics
 
 			</div>
 			</article>
@@ -100,17 +108,14 @@
 		 var w = window.innerWidth;
 		 var h = window.innerHeight;
 	
-		 $('.tile').click(function(){
+		 $('article a').click(function(){
 
 		 	var obj=$(this)
-		 	var property=$(obj).attr('class')
-		 	var id=$(obj).attr('id')
-			
+		 	var id=$(obj).attr('data-target')
 		 	$(".tile").hide()
-		 	$("#"+id).show()
-		 	$("#"+id).width('1315px')
-		 	$("#"+id).height(h)
-		 	$('.'+id).css('display','block')
+		 	$('#'+id).show()
+		 	$('#'+id).width('100%')
+		 	//$('#'+id).height(h)
 		 	$('.my_nav').css('display','block')
 
 		 })	
@@ -121,66 +126,65 @@
 
 	 	var obj1=$(this)
 	 	var property1=$(obj1).attr('class')
-	 	//alert(property1)
+
+
 	 	if( property1=='nav_attractions')
 	 	{
 	 		$(".tile").hide()
-			
-	 		$('.desc').show()
-	 		$('#attractions').show().width('1315px').height(h)
-			
+	 		$(".desc").hide()
+	 		$('#attractions').show()
 			
 	 	}
 	 	else if( property1=='nav_restaurants_and_cafe')
 	 	{
 	 		$(".tile").hide()
-
-	 		$('.desc').show()
-	 		$('#restaurants_and_cafe').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 	
+	 		$('#restaurants_and_cafe').show()
 			
 			
 	 	}
 	 	else if( property1=='nav_emergency')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#emergency').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 		$('#emergency').show()
 	 	}
 	 	else if( property1=='nav_it')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#it').show().width('1315px').height(h)
+			$(".desc").hide()
+	 		$('#it').show()
 	 	}
 	 	else if( property1=='nav_malls_and_supermarkets')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#malls_and_supermarkets').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 		$('#malls_and_supermarkets').show()
 	 	}
 	 	else if( property1=='nav_theaters')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#theaters').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 		$('#theaters').show()
 	 	}
 	 	else if( property1=='nav_fitness')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#fitness').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 		$('#fitness').show()
 	 	}
 	 	else if( property1=='nav_banks_and_atm')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#banks_and_atm').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 		$('#banks_and_atm').show()
 	 	}
 	 	else if( property1=='nav_petrol_bunks_and_mechanics')
 	 	{
 	 		$(".tile").hide()
-	 		$('.desc').show()
-	 		$('#petrol_bunks_and_mechanics').show().width('1315px').height(h)
+	 		$(".desc").hide()
+	 		$('#petrol_bunks_and_mechanics').show()
 	 	}
 	 })
 
